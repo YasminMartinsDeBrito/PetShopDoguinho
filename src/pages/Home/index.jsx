@@ -1,17 +1,28 @@
 import { useHistory } from "react-router-dom";
-
+import { Button, Img, Span,P } from "./styles";
+import doguinho from '../../assets/img/doguinho.png'
 const Home = () => {
   const history = useHistory();
 
   return (
     <>
       <header>
-        <button onClick={() => history.push("/sobre")}>Sobre</button>
-        <button onClick={() => history.push("/criador")}>Criador</button>
-        <button onClick={() => history.push("/foto")}>Fotos</button>
-        <button onClick={() => history.push("/login")}>Login</button>
-        <button onClick={() => history.push("/cadastro")}>Cadastro</button>
+        <div>
+           <P>Mimo'S</P>
+        <Img src={doguinho} alt='doguinho'/>
+        <Span>Pet Feliz</Span>
+      
+        </div>
+       
+        <Button onClick={() => history.push("/sobre")}><p>Sobre</p></Button>
+        <Button onClick={() => history.push("/criador")}><p>Criador</p></Button>
+        <Button onClick={() => history.push("/foto")}><p>Fotos</p></Button>
+        <Button onClick={() => history.push("/login")}><p>Login</p></Button>
+        <Button onClick={() => history.push("/cadastro")}><p>Cadastro</p></Button>
+    
       </header>
+     
+        
 
       <main>
         <section>

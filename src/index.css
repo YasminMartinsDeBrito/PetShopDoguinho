@@ -2,5 +2,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #faf7e0;
+}
+header{
+  background-color: #DDA15E;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  
 }
 
