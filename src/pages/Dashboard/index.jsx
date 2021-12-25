@@ -1,9 +1,10 @@
-
+import EnderecoCard from "../../components/EnderecoCard"
 
 const Dashboard = () => {
 
     return(
         <>
+        <EnderecoCard/>
          Esse é o Dashboard
         </>
     )

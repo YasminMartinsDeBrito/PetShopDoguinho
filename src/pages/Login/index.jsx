@@ -1,10 +1,10 @@
-
+import LoginCard from "../../components/LoginCard"
 
 const Login = () => {
 
     return(
         <>
-            Esse é o Login
+           <LoginCard/>
         </>
     )
 }

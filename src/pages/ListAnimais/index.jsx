@@ -1,10 +1,14 @@
-
+import ListCard from "../../components/ListCard"
 
 const ListAnimais = () => {
 
     return(
         <>
-         Esse é o ListAnimais
+        <h2>Animais que passaram por Aqui</h2>
+        <main>
+            <ListCard/>
+        </main> 
+        
         </>
     )
 }

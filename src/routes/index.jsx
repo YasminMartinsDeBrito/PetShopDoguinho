@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import Dashboard from "../pages/Dashboard";
 import ListAnimais from "../pages/ListAnimais";
+import Sobre from '../pages/Sobre';
+import Criador from "../pages/Criador";
 
 const Routers = () => {
   return (
@@ -28,6 +30,14 @@ const Routers = () => {
 
         <Route path="/foto">
           <ListAnimais />
+        </Route>
+
+        <Route path="/sobre">
+          <Sobre />
+        </Route>
+
+        <Route path="/criador">
+          <Criador />
         </Route>
 
       </Switch>
