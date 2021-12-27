@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form';
 import { yupResolver} from '@hookform/resolvers/yup';
 
 import { useHistory } from 'react-router-dom';
+
+import doguinho from '../../assets/img/doguinho.png';
+import { Divs,P,Img, Span, Main, Form, Div } from './style';
+
 const LoginCard = () => {
     const history = useHistory()
 
@@ -32,27 +36,38 @@ const LoginCard = () => {
 
     return(
         <>
-            <div>
-                <h2>Login</h2>
-                <form onSubmit={handleSubmit(onSubmitLogin)}>
-                    <input placeholder='Digite seu Nome'
-                    pattern="[a-z-A-Z\s]+$"
-                    {...register('name')}/>
-                    <span>{errors.name?.message}</span>
+            <header>
+                <Divs>
+                    <P>Mimo'<span>S</span></P>
+                    <Img src={doguinho} alt='doguinho'/>
+                    <Span>Pet Feliz</Span>
+                </Divs>
+            </header>
 
-                    <input placeholder='Digite sua Senha'
-                    type='password'
-                    {...register('senha')}/>
-                    <span>{errors.senha?.message}</span>
+            <Main> 
+                <img src={doguinho} alt='doguinho'/>
+                <Div>
+                    <h2>Login</h2>
+                    <Form onSubmit={handleSubmit(onSubmitLogin)}>
+                        <input placeholder='Digite seu Nome'
+                        pattern="[a-z-A-Z\s]+$"
+                        {...register('name')}/>
+                        <span>{errors.name?.message}</span>
 
-                    <button type='submit'>Logar</button>
-                </form>
+                        <input placeholder='Digite sua Senha'
+                        type='password'
+                        {...register('senha')}/>
+                        <span>{errors.senha?.message}</span>
 
-                <div>
-                    <h4>Ainda não fez o cadastro? Cadastre-se</h4>
-                    <button onSubmit={() => history.push('/cadastro')}>Logar</button>
-                </div>
-            </div>
+                        <button type='submit'>Logar</button>
+                    </Form>
+
+                    <div>
+                        <h4>Ainda não fez o cadastro? <button onSubmit={() => history.push('/cadastro')}>Cadastre-se</button></h4>
+                    </div>
+                </Div>
+               
+            </Main>
         </>
     )
 }

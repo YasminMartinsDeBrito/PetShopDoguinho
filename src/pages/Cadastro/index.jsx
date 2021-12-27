@@ -5,7 +5,6 @@ const Cadastro = () => {
 
     return(
         <>
-        <h2>Cadastre-se</h2>
          <CadastroCard/>
         </>
     )
