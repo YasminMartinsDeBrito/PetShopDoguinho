@@ -42,6 +42,7 @@ export const Span = styled.span`
     }
 `
 
+
 // estilizando o MAIN
 
 export const Main = styled.main`
@@ -49,7 +50,6 @@ export const Main = styled.main`
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
-    
     img{
         width: 70%;
         margin: 0 auto;
@@ -58,16 +58,15 @@ export const Main = styled.main`
     @media(min-width:768px){
 
         img{
-        width: 50%;
-        height: 50vh;
-        margin:12% auto;
+            width: 49%;
+            margin:12% auto;
+            transform: scaleX(-1);
         }
     }
     
    `
 
 export const Div = styled.div`
-
     margin: 0 auto;
     display: flex;
     justify-content:center;
@@ -75,10 +74,11 @@ export const Div = styled.div`
     align-items:center;
 
     @media(min-width:768px){
-        width: 49%;
+        width: 50%;
     }
 `
 export const Form = styled.form`
+
     display: flex;
     flex-direction: column;
     align-items: center;

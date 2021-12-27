@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import doguinho from '../../assets/img/doguinho.png';
 import { Divs,P,Img, Span, Main, Form, Div } from './style';
 
+import imgCadastro from '../../assets/img/cadastro.png'
 const CadastroCard = () => {
     const history = useHistory()
 
@@ -50,7 +51,7 @@ const CadastroCard = () => {
                 </Divs>
             </header>
         <Main>
-            <img src={doguinho} alt='doguinho'/>
+            <img src={imgCadastro} alt='imgCadastro'/>
             <Div>
                 
                 <h2>Cadastre-se</h2>

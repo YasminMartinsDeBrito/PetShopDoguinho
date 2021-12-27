@@ -7,6 +7,8 @@ import { useHistory } from 'react-router-dom';
 import doguinho from '../../assets/img/doguinho.png';
 import { Divs,P,Img, Span, Main, Form, Div } from './style';
 
+import imgLogin from '../../assets/img/doguinho.png';
+
 const LoginCard = () => {
     const history = useHistory()
 
@@ -45,7 +47,7 @@ const LoginCard = () => {
             </header>
 
             <Main> 
-                <img src={doguinho} alt='doguinho'/>
+                <img src={imgLogin} alt='doguinho'/>
                 <Div>
                     <h2>Login</h2>
                     <Form onSubmit={handleSubmit(onSubmitLogin)}>
