@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -8,17 +7,13 @@ const EnderecoCard = () => {
     const { register, handleSubmit, setValue, setFocus} = useForm();
 
       const onSubmit = (e) => {
-         setAdress([...adress,e]);  
-      
-     
-      
-      console.log( adress)
+        setAdress([...adress,e]);  
+        console.log( adress)
     };
 
     function checkCep(e) {
       const cep = e.target.value.replace(/\D/g, "");
-          console.log(cep)
-      
+      console.log(cep)
 
       fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((res) => res.json())
@@ -46,7 +41,7 @@ const EnderecoCard = () => {
 
           <div>
             <label>Rua:
-                <input name="rua" type="text" {...register("rua")} />
+                <input name="rua" type="text" {...register("rua")} disabled/>
             </label>
           </div>
 
@@ -58,19 +53,19 @@ const EnderecoCard = () => {
 
           <div>
             <label>Bairro:
-                <input name="bairro" type="text" {...register("bairro")} />
+                <input name="bairro" type="text" {...register("bairro")} disabled/>
             </label>
           </div>
 
           <div>
             <label>Cidade:
-                <input name="cidade" type="text" {...register("cidade")} />
+                <input name="cidade" type="text" {...register("cidade")} disabled/>
             </label>
           </div>
 
           <div>
             <label>Estado:
-                <input name="estado" type="text" {...register("estado")} />
+                <input name="estado" type="text" {...register("estado")}disabled />
             </label>
           </div>
 

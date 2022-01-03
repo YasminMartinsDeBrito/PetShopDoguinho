@@ -7,7 +7,8 @@ import { useHistory } from 'react-router-dom';
 import doguinho from '../../assets/img/doguinho.png';
 import { Divs,P,Img, Span, Main, Form, Div } from './style';
 
-import imgCadastro from '../../assets/img/cadastro.png'
+import imgCadastro from '../../assets/img/cadastro.png';
+
 const CadastroCard = () => {
     const history = useHistory()
 
@@ -74,11 +75,12 @@ const CadastroCard = () => {
                     <span>{errors.confirme_senha?.message}</span>
 
                     <button type='submit'>Cadastrar</button>
+                <div>
+                    <h4>Já possue cadastro? </h4>
+                    <button onSubmit={() => history.push('/login')}>Logar</button>
+                </div>
                 </Form>
-            <div>
-                <h4>Já possue cadastro? Faça Login</h4>
-                <button onSubmit={() => history.push('/login')}>Logar</button>
-            </div>
+           
             </Div>
            
                 

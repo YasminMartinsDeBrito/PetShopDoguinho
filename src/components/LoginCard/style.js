@@ -50,6 +50,7 @@ export const Main = styled.main`
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
+    
     img{
         width: 70%;
         margin: 0 auto;
@@ -73,17 +74,47 @@ export const Div = styled.div`
     flex-direction:column;
     align-items:center;
 
+   
     @media(min-width:768px){
         width: 50%;
     }
 `
 export const Form = styled.form`
 
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    /* width: 80vw; */
     input{
-        margin: 10px;
+        
+        margin-bottom: 15px;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #DDA15E;
+        outline: #aa702a;
+
+        ::placeholder{
+            color:#fff;
+        }
+    }
+
+    button{ 
+       display: flex;
+       margin: 0 auto;
+       border: none;
+       border-radius:5px;
+       padding: 8px;
+       background-color:#606C38;
+       cursor:pointer;
+       color:#fff;
+       box-shadow: -4px 4px 0 0 #283618;
+       transform: translate(7px, -7px);
+       transition: transform linear 100ms, box-shadow linear 100ms;
+       &:active {
+         transform: translate(0px, 0px);
+         box-shadow: 0 0 0 0;
+       }
     }
 `

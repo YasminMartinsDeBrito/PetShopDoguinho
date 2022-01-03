@@ -1,10 +1,15 @@
 import { AnimalProvider } from "./Animais";
+import { PetProvider } from "./NovoPet";
+
 
 const Providers = ({ children }) => {
   return (
-    <AnimalProvider>
-      {children}
-    </AnimalProvider>
+    <PetProvider>
+      <AnimalProvider>
+        {children}
+      </AnimalProvider>
+    </PetProvider>
+   
   );
 };
 export default Providers;

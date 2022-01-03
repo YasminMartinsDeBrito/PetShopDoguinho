@@ -32,6 +32,7 @@ const LoginCard = () => {
     const onSubmitLogin = (data) => {
        
          console.log(data)
+         alert('Logado com sucesso')
          history.push('/user')
        
     }
@@ -62,11 +63,13 @@ const LoginCard = () => {
                         <span>{errors.senha?.message}</span>
 
                         <button type='submit'>Logar</button>
+                        <div>
+                            <h4>Ainda não fez o cadastro?</h4>
+                            <button onSubmit={() => history.push('/cadastro')}>Cadastre-se</button>
+                        </div>
                     </Form>
 
-                    <div>
-                        <h4>Ainda não fez o cadastro? <button onSubmit={() => history.push('/cadastro')}>Cadastre-se</button></h4>
-                    </div>
+                    
                 </Div>
                
             </Main>
