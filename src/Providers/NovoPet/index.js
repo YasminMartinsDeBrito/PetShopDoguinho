@@ -11,18 +11,19 @@ export const PetProvider = ({ children }) => {
      }
 
      const deletePet = (removePet) => {
-            pet.filter((pets) => pets.name !== removePet)
+          const delPet = pet.filter((pets) => pets.name !== removePet.name)
+          setPet(delPet)
      }
 
      return(
-         <PetProvider.Proviver value={{
+         <PetContext.Provider value={{
             pet,
             setPet,
             createPet,
             deletePet,
          }}>
              {children}
-         </PetProvider.Proviver>
+         </PetContext.Provider>
      )
 }
    

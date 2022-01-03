@@ -1,5 +1,6 @@
 import AnimalCard from "../../components/AnimalCard";
 import EnderecoCard from "../../components/EnderecoCard";
+import PetCard from "../../components/PetCard";
 
 import doguinho from '../../assets/img/doguinho.png';
 import { Divs,P,Img, Span } from './styles';
@@ -21,6 +22,8 @@ const Dashboard = () => {
             <EnderecoCard/>
             <br/>
             <AnimalCard/>
+
+            <PetCard/>
         </main>
         
         </>

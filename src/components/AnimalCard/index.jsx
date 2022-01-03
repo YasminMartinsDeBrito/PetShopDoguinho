@@ -1,12 +1,11 @@
 import { useForm } from 'react-hook-form';
-
-// import { PetContext } from '../../Providers/NovoPet';
+import { useContext } from 'react';
+ import { PetContext } from '../../Providers/NovoPet';
 
 
 const AnimalCard = () => {
 
-
-    // const { createPet } = PetContext;
+    const { createPet } = useContext(PetContext)
 
     const {
         register,
@@ -15,7 +14,7 @@ const AnimalCard = () => {
 
 
     const onSubmit = (data) => {
-        // createPet(data)
+        createPet(data)
         console.log(data)
         alert('PetZinho Cadastrado com sucesso')
     }
@@ -62,16 +61,6 @@ const AnimalCard = () => {
             </form> 
         </div>  
         
-        {/* <div>
-            <ul>
-                {pet.map((index,pets) => (<li key={index}>
-                    {pets.name}
-                    {pets.idade}
-                    {pets.peso}
-                    {pets.sexo}
-                </li>))}
-            </ul>
-        </div> */}
         </>
     )
 }
