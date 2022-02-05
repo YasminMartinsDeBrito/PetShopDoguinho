@@ -7,11 +7,12 @@ export const PetProvider = ({ children }) => {
 
 
      const createPet = (novoPet) => {
+        
         setPet([...pet, novoPet])
      }
 
      const deletePet = (removePet) => {
-          const delPet = pet.filter((pets) => pets.name !== removePet.name)
+          const delPet = pet.filter((pets) => pets.numero !== removePet.numero)
           setPet(delPet)
      }
 
