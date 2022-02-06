@@ -1,14 +1,23 @@
 import { AnimalProvider } from "./Animais";
+import { EnderecoProvider } from "./NovoEndereco";
 import { PetProvider } from "./NovoPet";
+import { ServicoProvider } from "./NovoServico";
+import { PetServicoProvider } from "./PetServicos";
 
 
 const Providers = ({ children }) => {
   return (
-    <PetProvider>
-      <AnimalProvider>
-        {children}
-      </AnimalProvider>
-    </PetProvider>
+    <EnderecoProvider>
+      <ServicoProvider>
+        <PetProvider>
+      <PetServicoProvider>
+        <AnimalProvider>
+          {children}
+        </AnimalProvider>
+      </PetServicoProvider>
+      </PetProvider>
+      </ServicoProvider>
+    </EnderecoProvider>
    
   );
 };

@@ -14,7 +14,6 @@ const Routers = () => {
       <Switch>
         <Route exact path="/">
          <Home />
-          
         </Route>
 
         <Route path="/login">
