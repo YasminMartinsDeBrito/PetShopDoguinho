@@ -86,7 +86,7 @@ const Home = () => {
           <>
             <Button
               p="5px 10px"
-              mr='10px'
+              mr="10px"
               border="none"
               bg="#606c38"
               borderRadius="8px"
@@ -98,7 +98,7 @@ const Home = () => {
             </Button>
             <Button
               p="5px 10px"
-              mr='10px'
+              mr="10px"
               border="none"
               bg="#606c38"
               borderRadius="8px"
@@ -110,7 +110,7 @@ const Home = () => {
             </Button>
             <Button
               p="5px 10px"
-              mr='10px'
+              mr="10px"
               border="none"
               bg="#606c38"
               borderRadius="8px"
@@ -122,7 +122,7 @@ const Home = () => {
             </Button>
             <Button
               p="5px 10px"
-              mr='10px'
+              mr="10px"
               border="none"
               bg="#606c38"
               borderRadius="8px"
@@ -134,7 +134,7 @@ const Home = () => {
             </Button>
             <Button
               p="5px 10px"
-              mr='10px'
+              mr="10px"
               border="none"
               bg="#606c38"
               borderRadius="8px"
@@ -156,7 +156,7 @@ const Home = () => {
           <DrawerContent
             display="flex"
             alignItems="center"
-            h="400px"
+            h="350px"
             backgroundColor="#DDA15E"
           >
             <DrawerCloseButton
@@ -170,10 +170,11 @@ const Home = () => {
               <Button
                 p="5px 10px"
                 border="none"
-                bg="#606c38"
+                bg="transparent"
                 borderRadius="8px"
                 color="#fff"
                 cursor="pointer"
+                _hover={{ color: "#606c38" }}
                 onClick={() => history.push("/sobre")}
               >
                 <p>About</p>
@@ -181,10 +182,11 @@ const Home = () => {
               <Button
                 p="5px 10px"
                 border="none"
-                bg="#606c38"
+                bg="transparent"
                 borderRadius="8px"
                 color="#fff"
                 cursor="pointer"
+                _hover={{ color: "#606c38" }}
                 onClick={() => history.push("/criador")}
               >
                 <p>Criador</p>
@@ -192,10 +194,11 @@ const Home = () => {
               <Button
                 p="5px 10px"
                 border="none"
-                bg="#606c38"
+                bg="transparent"
                 borderRadius="8px"
                 color="#fff"
                 cursor="pointer"
+                _hover={{ color: "#606c38" }}
                 onClick={() => history.push("/foto")}
               >
                 <p>Fotos</p>
@@ -203,10 +206,11 @@ const Home = () => {
               <Button
                 p="5px 10px"
                 border="none"
-                bg="#606c38"
+                bg="transparent"
                 borderRadius="8px"
                 color="#fff"
                 cursor="pointer"
+                _hover={{ color: "#606c38" }}
                 onClick={() => history.push("/login")}
               >
                 <p>Login</p>
@@ -214,10 +218,11 @@ const Home = () => {
               <Button
                 p="5px 10px"
                 border="none"
-                bg="#606c38"
+                bg="transparent"
                 borderRadius="8px"
                 color="#fff"
                 cursor="pointer"
+                _hover={{ color: "#606c38" }}
                 onClick={() => history.push("/cadastro")}
               >
                 <p>Cadastro</p>
@@ -237,18 +242,18 @@ const Home = () => {
       >
         {/* Box do SOBRE */}
         <Box h="300px">
-          Banho e Tosa Mimo's Pet Feliz O maior amor do mundo com seu pet ❤ 🙆🏽‍♀️
-          Groomer
-          <Link href="https://www.instagram.com/alexandraedonizete/" isExternal>
-            @Alexandra
-          </Link>
-          <br />
+          Banho e Tosa{" "}
           <Link
             href="https://www.instagram.com/banhoetosamimospetfeliz4/"
             isExternal
           >
-            @Mimo'S
+            Mimo'S
+          </Link>{" "}
+          Pet Feliz O maior amor do mundo com seu pet ❤ 🙆🏽‍♀️ Groomer
+          <Link href="https://www.instagram.com/alexandraedonizete/" isExternal>
+            @Alexandra
           </Link>
+          <br />
           <List spacing={4} mb="5px">
             <ListItem>
               <ListIcon as={MdCheckCircle} color="#606C38" />
@@ -272,10 +277,13 @@ const Home = () => {
             </ListItem>
           </List>
           <Button
+            mt="15px"
+            ml="40px"
             p="10px 20px"
             border="none"
             bg="#606c38"
             borderRadius="8px"
+            cursor="pointer"
             color="#fff"
             onClick={() => history.push("/sobre")}
           >
@@ -285,30 +293,46 @@ const Home = () => {
 
         <Divider orientation="horizontal" />
 
-        <Box h="300px">
-          <Image
-            m="12% auto"
-            borderRadius="50%"
-            w="200px"
-            h="200px"
-            src={alexandra}
-            alt="alexandra"
-          />
+        {/* QUEM criou o Petshop */}
+        <Box h="350px">
+          <Text>
+            Sou Alexandra , sempre gostei de animais e quiz me profissionalizar
+            na area de PetShop, por que tem muito amor pelos animais. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero
+            animi eius, explicabo molestias necessitatibus laudantium odio
+            deleniti? Tenetur, eum est eius odio animi voluptatem autem eaque
+            accusamus illum sequi!
+          </Text>
           <Button
             p="10px 20px"
             border="none"
             bg="#606c38"
             borderRadius="8px"
             color="#fff"
+            mb="55px"
             onClick={() => history.push("/criador")}
           >
             Criador
           </Button>
+          <Image
+            m="12% auto"
+            borderRadius="50%"
+            w="150px"
+            h="150px"
+            src={alexandra}
+            alt="alexandra"
+          />
         </Box>
 
-        <Box h="300px">
-          Aqui voce vera as fotos mais fofas do mundo
+        <Divider orientation="horizontal" />
+
+        <Box h="300px" mt="55px">
+          Aqui voce vera as fotos mais fofas do mundo, Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Illo quas alias fugit, dolor rerum
+          modi maxime ipsum quae porro error facilis qui a voluptatem nostrum?
+          Et aspernatur aliquid eveniet laborum?
           <Button
+            ml="15px"
             p="10px 20px"
             border="none"
             bg="#606c38"
@@ -319,8 +343,7 @@ const Home = () => {
             Fotos
           </Button>
         </Box>
-      </Container>
-      <Box h="300px">
+      <Box h="100px">
         <Text>
           {" "}
           esse site foi criado por{" "}
@@ -328,6 +351,7 @@ const Home = () => {
           aperfeiçoar seus conhecimentos em <strong>React</strong>
         </Text>
       </Box>
+      </Container>
     </>
   );
 };

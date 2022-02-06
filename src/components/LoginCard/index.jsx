@@ -65,12 +65,12 @@ const LoginCard = () => {
             <span>{errors.senha?.message}</span>
 
             <button type="submit">Logar</button>
-            <div>
+            {/* <div> */}
               <h4>Ainda não fez o cadastro?</h4>
               <button onSubmit={() => history.push("/cadastro")}>
                 Cadastre-se
               </button>
-            </div>
+            {/* </div> */}
           </Form>
         </Div>
       </Main>

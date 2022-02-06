@@ -7,6 +7,7 @@ export const ServicoProvider =({children}) => {
 
     const createServico = (novoServico) => {
         setServicos([...servicos,novoServico])
+        
     }
     
     const deletServicos = (removeServico) => {

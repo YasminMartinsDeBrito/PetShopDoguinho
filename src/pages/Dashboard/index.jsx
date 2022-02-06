@@ -7,6 +7,9 @@ import doguinho from '../../assets/img/doguinho.png';
 import { Divs,P,Img, Span } from './styles';
 import EnderecoList from "../../components/EnderecoList";
 
+import { Container } from "@chakra-ui/react";
+import ListServicosPet from "../../components/ListServicosPet/ListSevicosPet";
+
 
 const Dashboard = () => {
 
@@ -21,21 +24,31 @@ const Dashboard = () => {
         </header>
 
         <main>
-            {/* endereco das pessoas */}
+            <Container>
+
+            {/* adicionar endereco das pessoas */}
             <EnderecoCard/>
             <br/>
-            <EnderecoList/>
-
-         {/*  Adicionar animal  */}
-            <br/>
+            {/*  Adicionar animal  */}
             <AnimalCard/>
+            <br/>
+            {/* Escolhendo o servico para o pet */}
+            <ServicoCard/>
+            </Container>
 
+
+            {/* mostar na tela */}
+            <Container>
             {/* Mostrar Animal adicionado */}
             <PetCard/>
             <br/>
+            {/* Mostrar endereco acionado */}
+            <EnderecoList/>
+            {/* Mostar o seervico de cada pet */}
 
-            {/* Escolhendo o servico para o pet */}
-            <ServicoCard/>
+            <ListServicosPet/>
+            </Container>
+
         </main>
         
         </>
