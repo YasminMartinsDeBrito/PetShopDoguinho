@@ -7,7 +7,6 @@ export const PetProvider = ({ children }) => {
 
 
      const createPet = (novoPet) => {
-        
         setPet([...pet, novoPet])
      }
 

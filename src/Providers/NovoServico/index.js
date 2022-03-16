@@ -6,12 +6,13 @@ export const ServicoProvider =({children}) => {
     const [servicos, setServicos] = useState([])
 
     const createServico = (novoServico) => {
+        
         setServicos([...servicos,novoServico])
         
     }
     
     const deletServicos = (removeServico) => {
-        const delServico = servicos.filter((serv) => serv.item !== removeServico.item)
+        const delServico = servicos.filter((serv) => serv.numero !== removeServico.numero)
         setServicos(delServico)
     }
 

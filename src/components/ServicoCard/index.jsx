@@ -49,6 +49,11 @@ const ServicoCard = () => {
 
   return (
     <>
+          {
+            pet.length >= 1 ?
+            (<>
+    <>
+          
       <Text>
         Escolha o Serviço
         <Icon as={GiShower} cursor="pointer" fontSize="40px" onClick={onOpen} />
@@ -62,42 +67,41 @@ const ServicoCard = () => {
             display="flex"
             alignItems="center"
             mt="100px"
-            h="200px"
             w="200px"
+            h="250px"
             borderRadius="10px"
-            backgroundColor="#f8f9fa"
-          >
+            backgroundColor="#9ac8f7"
+            >
             <ModalHeader
               display="flex"
               justifyContent="space-between"
-              borderRadius="10px 10px 0 0"
-              p="7px"
-              w="96.9%"
+              p="5px"
               mt='15px'
-            >
+              backgroundColor="#9ac8f7"
+              >
               Escolha seu Mimo
             </ModalHeader>
             <ModalCloseButton
-              width="40px"
-              bg="transparent"
-              border="none"
-              cursor="pointer"
-              mb='20px'
+            width="40px"
+            bg="transparent"
+            border="none"
+            cursor="pointer"
+            mb='20px'
             />
-
-              <FormControl as="form" onSubmit={handleSubmit(onService )}>
-                <FormLabel>Pacotes</FormLabel>
-                <Select {...register('mimo')}>
+            <FormControl as="form" onSubmit={handleSubmit(onService )}>
+            <FormLabel>Nossos Pacotes</FormLabel>
+                <Select  {...register('mimo')}>
                     <option value='mensal'>Mensal</option>
                     <option value='semanal'>Semanal</option>
                 </Select>
 
                 <Select {...register('pet')}>
                   {pet.map((pets) => (
-                    <option value={pets.name}>{pets.name}</option>
+                    <option key={pets.name} value={pets.name}>
+                       {pets.name}
+                       {pets.idade}
+                    </option>
                   ))}
-                  
-             
                   
                 </Select>
                  
@@ -109,11 +113,17 @@ const ServicoCard = () => {
               
               </ModalFooter>
               </FormControl>
-
-          </ModalContent>
-        </Center>
-      </Modal>
-    </>
+               
+               </ModalContent>
+               </Center>
+               </Modal>
+  
+               
+              </>
+               </> ):
+               (<></>)
+               }
+               </>
   );
 };
 export default ServicoCard;
